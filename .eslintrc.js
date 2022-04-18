@@ -19,8 +19,29 @@ module.exports = {
     'react',
     '@typescript-eslint',
   ],
+  settings: {
+    // Ignore file extension on imports (rule and setting)
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
+    },
+  },
   rules: {
+    // Allow jsx in tsx file format
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx', '.tsx'] }],
+    // No linebreak style ( RF/CRLF )
     'linebreak-style': 0,
+    // Ignore file extension on imports (rule and setting)
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        js: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
+      },
+    ],
   },
 };
