@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { Attribute as AttributeComponent, IAttribute } from './Attribute';
+import { Attribute, IAttribute } from './Attribute';
 
 export interface ICard {
-    attributes: IAttribute[] ;
+    attributes: IAttribute[];
     name: string;
     imageSrc: string;
 }
@@ -13,7 +13,7 @@ export default function Card (props: ICard) {
       <p>{props.name}</p>
       <img src={props.imageSrc}></img>
       {props.attributes.map((attribute) => {
-          <AttributeComponent {...attribute}/>
+          <Attribute {...attribute}/>
       })}
     </>
   );
