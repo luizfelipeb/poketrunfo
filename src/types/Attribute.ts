@@ -1,7 +1,9 @@
 export default class Attribute {
   value: number;
+  name: string;
 
-  constructor(value: number) {
+  constructor(value: number, name: string) {
     this.value = value;
+    this.name = name;
   }
 }
