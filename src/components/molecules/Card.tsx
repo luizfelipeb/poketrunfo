@@ -1,9 +1,8 @@
 import * as React from 'react';
-import Attribute from '../../types/Attribute';
-import { Attribute as AttributeComponent } from './Attribute';
+import { Attribute as AttributeComponent, IAttribute } from './Attribute';
 
 export interface ICard {
-    attributes: Attribute[] ;
+    attributes: IAttribute[] ;
     name: string;
     imageSrc: string;
 }
