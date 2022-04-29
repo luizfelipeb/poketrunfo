@@ -7,7 +7,7 @@ export interface IAttribute {
 
 export function Attribute({ name, value }: IAttribute) {
   return (
-    <button type="button" onClick={}>
+    <button type="button">
       <p>{name}</p>
       <p>{value}</p>
     </button>
