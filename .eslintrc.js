@@ -43,5 +43,9 @@ module.exports = {
         tsx: 'never',
       },
     ],
+    // No prefer export default
+    'import/prefer-default-export': 'off',
+    // No props spreading forbiden
+    'react/jsx-props-no-spreading': 'off',
   },
 };
