@@ -3,18 +3,16 @@ import { Attribute, IAttribute } from './Attribute';
 
 export interface ICard {
     attributes: IAttribute[];
-    name: string;
+    pokemonName: string;
     imageSrc: string;
 }
 
-export default function Card (props: ICard) {
+export default function Card({ pokemonName, imageSrc, attributes } : ICard) {
   return (
     <>
-      <p>{props.name}</p>
-      <img src={props.imageSrc}></img>
-      {props.attributes.map((attribute) => {
-          <Attribute {...attribute}/>
-      })}
+      <p>{pokemonName}</p>
+      <img src={imageSrc} alt="Pokemon" />
+      {attributes.map((attribute) => <Attribute {...attribute} />)}
     </>
   );
 }

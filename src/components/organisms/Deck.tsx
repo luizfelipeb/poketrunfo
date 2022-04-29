@@ -6,12 +6,10 @@ export interface IDeck {
     score: number;
 }
 
-export function Deck (props: IDeck) {
+export function Deck({ cards }: IDeck) {
   return (
     <>
-        {props.cards.map((card) => {
-            <Card {...card}/>
-        })}
+      {cards.map((card) => <Card {...card} />)}
     </>
   );
 }

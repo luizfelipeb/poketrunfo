@@ -5,11 +5,11 @@ export interface IAttribute {
     value: number;
 }
 
-export function Attribute (props: IAttribute) {
+export function Attribute({ name, value }: IAttribute) {
   return (
-    <>
-      <p>{props.name}</p>
-      <p>{props.value}</p>
-    </>
+    <button type="button" onClick={}>
+      <p>{name}</p>
+      <p>{value}</p>
+    </button>
   );
 }
