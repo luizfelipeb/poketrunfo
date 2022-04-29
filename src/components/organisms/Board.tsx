@@ -1,15 +1,17 @@
 import * as React from 'react';
-import { IDeck } from './Deck';
+import { Deck, IDeck } from './Deck';
+import { DeckBack } from '../molecules/DeckBack';
+import { BoardContextProvider } from '../../context/board/Provider';
 
 export interface IBoard {
-    deck1: IDeck;
-    deck2: IDeck;
+    playerDack: IDeck;
 }
 
-export function Board (props: IBoard) {
+export function Board({ playerDack } : IBoard) {
   return (
-    <div>
-      
-    </div>
+    <BoardContextProvider>
+      <DeckBack cardAmount={10} />
+      <Deck {...playerDack} />
+    </BoardContextProvider>
   );
 }
