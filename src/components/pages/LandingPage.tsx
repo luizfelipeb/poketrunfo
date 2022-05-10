@@ -1,8 +1,11 @@
 import * as React from 'react';
-import { useBoardContext } from '../../context/board/useCard';
+// import { useBoardContext } from '../../context/board/useBoard';
+import { usePokeApi } from '../../service/pokeApi/usePokeApi';
 
 export function LandingPage() {
-  const { startGame } = useBoardContext();
+  // const { startGame } = useBoardContext();
+
+  const { consumePokeApi } = usePokeApi();
 
   return (
     <div>
@@ -13,7 +16,7 @@ export function LandingPage() {
         maxime expedita iure cumque doloremque nobis nihil et,
         minus laborum quo tenetur voluptatibus. Officiis, quisquam.
       </p>
-      <button type="button" onClick={startGame}>Iniciar Jogo</button>
+      <button type="button" onClick={consumePokeApi}>Iniciar Jogo</button>
     </div>
   );
 }
