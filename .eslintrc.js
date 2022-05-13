@@ -47,5 +47,7 @@ module.exports = {
     'import/prefer-default-export': 'off',
     // No props spreading forbiden
     'react/jsx-props-no-spreading': 'off',
+    // No array index antipattern warn
+    'react/no-array-index-key': 'off',
   },
 };
