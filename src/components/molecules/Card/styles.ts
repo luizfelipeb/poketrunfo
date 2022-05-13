@@ -23,10 +23,16 @@ export const Container = styled.div`
         }
     }
 
+    .attr-list {
+        display: flex;
+        flex-direction: column;
+    }
+
 `;
 
 export const StyledPaper = muiStyled(Paper)(() => ({
   height: '100%',
   borderRadius: '20px',
   padding: '25px',
+  background: 'linear-gradient(126deg, rgba(232,232,232,1) 0%, rgba(255,255,255,1) 35%, rgba(224,224,224,1) 100%)',
 }));

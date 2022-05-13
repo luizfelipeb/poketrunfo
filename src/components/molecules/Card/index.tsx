@@ -16,7 +16,9 @@ export default function Card({ pokemonName, imageSrc, attributes } : ICard) {
           <div className="card-name">{pokemonName}</div>
           <img src={imageSrc} alt="Pokemon" />
         </div>
-        {attributes.map((attribute, index) => <Attribute {...attribute} key={index} />)}
+        <div className="attr-list">
+          {attributes.map((attribute, index) => <Attribute {...attribute} key={index} />)}
+        </div>
       </StyledPaper>
     </Container>
   );
