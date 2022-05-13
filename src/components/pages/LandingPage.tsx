@@ -37,7 +37,7 @@ export function LandingPage() {
       <Card
         attributes={parseStatsToAtributes(stats)}
         pokemonName={pokemon.name}
-        imageSrc={pokemon.sprites.front_default}
+        imageSrc={pokemon.sprites.other['official-artwork'].front_default}
       />
       )}
     </div>
