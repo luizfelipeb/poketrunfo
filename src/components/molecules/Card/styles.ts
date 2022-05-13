@@ -19,7 +19,6 @@ export const Container = styled.div`
 
         img {
             width: 200px;
-            transform:scale(2);
         }
     }
 
